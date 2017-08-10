@@ -1,0 +1,45 @@
+﻿<Page
+    x:Class="MyCompositionAnimation.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyCompositionAnimation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls">
+    <Page.DataContext>
+        <local:ViewModel/>
+    </Page.DataContext>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid x:Name="root">
+            <Button Content="StartAnimation" Canvas.Top="110" Click="StartAnimation_Click"/>
+        </Grid>
+        <!--<Border x:Name="SelectedLine" Height="20" Width="10" VerticalAlignment="Center" Background="Transparent" Margin="30,0,0,0"
+                BorderThickness="2"
+                BorderBrush="Black" >
+            <Border.Triggers>
+                <EventTrigger RoutedEvent="Border.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="SelectedLine" Storyboard.TargetProperty="Width" From="10" To="100" Duration="0:0:1"
+                                             EnableDependentAnimation="True"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Border.Triggers>
+        </Border>-->
+        <!--<ScrollViewer x:Name="MyScroll" Height="100" VerticalAlignment="Top" ViewChanged="Scroll_ViewChanged" ZoomMode="Enabled">
+            <StackPanel>
+                <TextBlock Text="first"/>
+                <TextBlock Text="first"/>
+                <TextBlock Text="first"/>
+                <TextBlock Text="first"/>
+                <TextBlock Text="first"/>
+                <TextBlock Text="first"/>
+                <TextBlock Text="first"/>
+                <TextBlock Text="first"/>
+            </StackPanel>
+        </ScrollViewer>-->
+
+    </Grid>
+</Page>
